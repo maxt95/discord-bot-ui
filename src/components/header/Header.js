@@ -5,7 +5,7 @@ export default class Header extends Component {
     render() {
         return (
             <div className="header">
-                <i className="material-icons nav">
+                <i className="material-icons nav" onClick={this.props.handleClick}>
                     menu
                     </i>
                 <div className="bot-name">

@@ -1,3 +1,13 @@
 .sidenav {
-    
+    width: 0px;
+    transition: width .1s linear 0s;
+}
+
+.sidenav-active {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    width: 100%;
+    background-color: #212121;
+    transition: width .1s linear 0s;
+    // transition-delay: 0.2s;
 }
