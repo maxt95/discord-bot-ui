@@ -1,19 +1,15 @@
 .App {
   height: 100vh;
   text-align: center;
-  background-color: black;
+  // background-color: black;
 
   display: grid;
   grid-template-rows: 60px auto;
-  grid-template-columns: 200px auto;
+  grid-template-columns: minmax(0px,200px) auto;
 
   .header {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .sidenav {
-    grid-column-start: 1;
-    grid-row-start: 2;
-  }
 }

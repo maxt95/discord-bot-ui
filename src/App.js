@@ -5,12 +5,26 @@ import Header from './components/header'
 import Sidenav from './components/sidenav'
 
 class App extends Component {
+
+  state = {
+    sidenavOpen: false,
+  }
+
+  handleMenuClick = () => {
+    if(this.state.sidenavOpen) {
+      this.setState({sidenavOpen: false})
+    }
+    else {
+      this.setState({sidenavOpen: true})
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Header className="app-header" />
+        <Header handleClick={this.handleMenuClick} />
 
-        <Sidenav className="app-sidenav"/>
+        <Sidenav active={this.state.sidenavOpen} />
         <StatsPage />
       </div>
     );
